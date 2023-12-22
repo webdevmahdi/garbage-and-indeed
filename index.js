@@ -10,7 +10,7 @@ const makeCommit = n => {
     const x = {min: 0, max: 54, integer: true};
     const y = {min: 0, max: 6, integer: true};
     rn(x,y);
-    const z = {min: 100, max: 720, integer: true };
+    const z = {min: 20, max: 100, integer: true };
     
     const DATE = moment().subtract(rn(z), 'd').add(1, 'd').add(x, 'w').add(y, 'd').format();
     const data = {
@@ -22,4 +22,4 @@ const makeCommit = n => {
         makeCommit.bind(this, --n));
     });
 }
-makeCommit(1000);
+makeCommit(20);
